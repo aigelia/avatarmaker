@@ -19,5 +19,8 @@ green_coordinates = (25, 0, green.width - 25, green.height)
 green_cropped = green.crop(green_coordinates)
 
 new_image = Image.merge("RGB", (red_cropped, green_cropped, blue_cropped))
+new_image.thumbnail((80, 80))
+print(new_image.size)
+
 
 new_image.save("new_image.jpg")
